@@ -1,0 +1,15 @@
+<!--new/new.wxml-->
+<!-- <scroll-view class="scroll-view"> -->
+<view class="swiper">
+<view wx:for="{{filmList}}">
+  <view class="swiper-item">
+    <image class="filmicon" src="{{ item.imgpath }}" mode="aspectFit"></image>
+    <view class="decs-view">
+      <view class="title">{{ item.title }}</view>
+      <view class="detail">{{ item.detail}}</view>
+      <view class="rating">评分:{{ item.rating }}</view>
+    </view>
+  </view>
+</view>
+</view>
+<!-- </scroll-view> -->

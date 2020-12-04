@@ -1,0 +1,3 @@
+<!--weekly/weekly.wxml-->
+<!-- <text>weekly/weekly.wxml</text> -->
+<map name="map" latitude="22.53332" longitude="113.93041"></map>

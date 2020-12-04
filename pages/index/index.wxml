@@ -1,4 +1,0 @@
-<!--index.wxml-->
-<view class="container">
-  <view bindtap="bindViewTap" class="userinfo-avatar">哈哈哈</view>
-</view>
