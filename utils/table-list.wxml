@@ -1,6 +1,6 @@
 <template name="cell-item">
     <view class="swiper-item">
-        <image class="filmicon" src="{ { item.imgpath} }" mode="aspectFit"/>
+        <image class="filmicon" src="{{ item.imgpath }}" mode="aspectFit"/>
             <view class="decs-view">
                 <view class="title">{{ item.title }}</view>
                 <view class="detail">{{ item.detail}}</view>
@@ -9,8 +9,8 @@
     </view>
 </template>
 
-<!-- <template name="table-list">
-    <scroll-view class="swiper" scroll-y="true">
-        <template is="{{ cell-item }}" data="{{item}}" wx:for="{{ usboxs }}" />
-    </scroll-view>
-</template> -->
+<template name="table-list">
+    <view wx:for="{{ usboxs }}">
+        <template is="cell-item" data="{{item}}"/>
+    </view>
+</template>

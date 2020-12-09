@@ -1,11 +1,6 @@
 <!--usbox/usbox.wxml-->
 <import src="../utils/table-list.wxml"/>
-<!-- <view class="swiper-item" wx:for="{{ usboxs }}">
-    <template is="cell-item"/>
-</view> -->
-<!-- <template is="cell-item" data="{{ ...usboxs }}"/> -->
-<scroll-view class="swiper" scroll-y="true">
-    <view wx:for="{{ usboxs }}">
-        <template is="cell-item" data="{{item}}"/>
-    </view>
+
+<scroll-view scroll-y="true">
+    <template is="table-list" data="{{ usboxs }}"/>
 </scroll-view>

@@ -1,3 +1,10 @@
 <!--weekly/weekly.wxml-->
 <!-- <text>weekly/weekly.wxml</text> -->
-<map name="map" latitude="22.53332" longitude="113.93041"></map>
+<!-- <map name="map" latitude="22.53332" longitude="113.93041">1111</map> -->
+
+<view class="swiper">
+  <view class="swiper-item" wx:for="{{ weeklys }}">
+    <image class="filmicon" src="{{ item.imgpath }}" mode="aspectFit"></image>
+    <text class="title">{{ item.title }}</text>
+  </view>
+</view>

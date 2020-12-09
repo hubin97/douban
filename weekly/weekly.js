@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    weeklys: []
   },
 
   /**
@@ -17,6 +17,19 @@ Page({
     http.weekly({
       success: res=>{
         console.log("weekly:", res)
+        let subjects = res['subjects']
+        var films = []
+        for (let index = 0; index < subjects.length; index++) {
+          const meta = subjects[index]['subject']
+          let filmMeta = {
+            imgpath: meta['images']['small'],
+            title: meta['title'],
+            rating: meta['rating']['average']
+          }
+          films.push(filmMeta)
+        }
+        console.log('weeklys:', films)
+        this.setData({ weeklys: films })
       },
       fail: err=>{
         console.log(err)
@@ -29,15 +42,15 @@ Page({
    */
   onReady: function () {
     
-    wx.getLocation({
-      type: 'wgs84',
-      success: (res) => {
-        var latitude = res.latitude // 纬度
-        var longitude = res.longitude // 经度
-        console.log('latitude:', latitude)
-        console.log('longitude:', longitude)
-      }
-    })
+    // wx.getLocation({
+    //   type: 'wgs84',
+    //   success: (res) => {
+    //     var latitude = res.latitude // 纬度
+    //     var longitude = res.longitude // 经度
+    //     console.log('latitude:', latitude)
+    //     console.log('longitude:', longitude)
+    //   }
+    // })
   },
 
   /**
